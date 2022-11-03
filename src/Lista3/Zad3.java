@@ -26,6 +26,21 @@ public class Zad3 {
             }
         }
     }
+    public static void IloczynMacierzy(int[][] M1,int[][] M2){
+        int suma;
+        int[][] Iloczyn = new int[M][M];
+        for (int i = 0; i <M1.length; i++) {
+            for (int j = 0; j <M1.length ; j++) {
+                suma=0;
+                for (int k = 0; k <M1.length ; k++) {
+                    suma+=M1[i][k]*M2[k][j];
+
+                }
+                Iloczyn[i][j]=suma;
+                System.out.println(suma);
+            }
+        }
+    }
 
 
 
@@ -33,5 +48,6 @@ public class Zad3 {
         WypelnijMacierz(Macierz1,10);
         WypelnijMacierz(Macierz2,10);
         SumaMacierzy(Macierz1,Macierz2);
+        IloczynMacierzy(Macierz1,Macierz2);
     }
 }
